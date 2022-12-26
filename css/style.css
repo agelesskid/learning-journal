@@ -130,7 +130,10 @@ main {
 /* Blog */
 
 .blog ul {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(3, 1fr);
+    gap: 1.625em; */
 }
 
 .blog ul li {
@@ -144,11 +147,17 @@ main {
         ". blog-desc  blog-desc  ."
         ".      .         .      ."
     ;
+
+    justify-items: start;
 }
 
 .blog ul li img {
     grid-area: blog-image;
-    max-width: 374px;
+    width: 374px;
+    height: 232px;
+    justify-self: center;
+    object-fit: cover;
+    border-radius: 1%;
 }
 
 .blog__date {
