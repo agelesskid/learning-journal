@@ -8,13 +8,13 @@
 </head>
 <body>
     <header>
-        <nav class="header__nav">
-            <div class="header__nav__logo-box">
+        <nav class="header__nav flex">
+            <div class="header__nav__logo-box flex">
                 <img src="./img/logo.png" alt="My learning journal logo">
-                <h1 class="fw700 lh1-25">My learning journal</h1>
+                <h1 class="lh1-25">My learning journal</h1>
             </div>
-            <div class="header__nav__link-box">
-                <ul>
+            <div class="header__nav__link-box flex">
+                <ul class="flex">
                     <li><a class="lh1-25" href="./index.html">Home</a></li>
                     <li><a class="lh1-25" href="./about.html">About me</a></li>
                 </ul>
@@ -22,20 +22,33 @@
         </nav>
     </header>
 
-    <main>
+    <main class="flex">
         <section class="featured">
             <p class="featured__date lh1-25">JULY 23, 2022</p>
-            <h2 class="featured__heading"><a class="fw700" href="./featured.html">My new journey as a bootcamp student.</a></h2>
+            <h2 class="featured__heading"><a href="./featured.html">My new journey as a bootcamp student.</a></h2>
             <p class="featured__desc">
                 After several months of learning in the Frontend Developer Career Path,
                 I've made the big jump over to the Bootcamp to get expert code reviews
                 of my Solo Projects projects and meet like-minded peers.
             </p>
         </section>
+        <section class="blog">
+            <ul>
+                <li>
+                    <img src="./img/laptop-on-the-table-with-a-plant.jpg" alt="Laptop on the table with a plant">
+                    <p class="blog__date">JULY 23, 2022</p>
+                    <h2 class="blog__heading">Blog one</h2>
+                    <p class="blog__desc">
+                        I'm excited to start a new learning journey as a Scrimba Bootcamp student!
+                        After several months of learning in the Frontend Developer Career Path.
+                    </p>
+                </li>
+            </ul>
+        </section>
     </main>
 
-    <footer>
-        <p class="footer__heading fw700">My Learning Journal</p>
+    <footer class="flex">
+        <h3 class="footer__heading">My Learning Journal</h3>
         <p class="footer__desc">Copyright ©2022</p>
     </footer>
 </body>

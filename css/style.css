@@ -22,29 +22,25 @@ a {
     text-decoration: none;
 }
 
-/* Mixed */
-
-.header__nav,
-.header__nav__logo-box,
-.header__nav__link-box,
-.header__nav__link-box ul,
-footer {
-    display: flex;
+h1, h2, h2 a, h3 {
+    font-weight: 700;
 }
 
+/* Mixed */
+
 .header__nav__logo-box,
 .header__nav__link-box,
-footer{
+footer {
     align-items: center;
 }
 
 /* Misc */
 
-.fw700{
-    font-weight: 700;
+.flex {
+    display: flex;
 }
 
-.lh1-25{
+.lh1-25 {
     line-height: 1.25;
 }
 
@@ -86,22 +82,23 @@ header {
 /* Main */
 
 main {
-    display: flex;
     flex-direction: column;
 }
 
 .featured {
     background: url("../img/laptop-with-a-lamp.jpg") center center / cover no-repeat;
     display: grid;
-    grid-template: 1.5em 1fr 1fr 0.5em 1fr 2em / 1.25em 1fr 1fr 1fr 1.25em;
+    grid-template: 1.5em 1fr 1fr 0.5em 1fr 2em / 1.25em 1fr 2fr 1.25em;
     grid-template-areas:
-        ". . . . ."
-        ". date . . ."
-        ". heading heading heading ."
-        ". . . . ."
-        ". desc desc desc ."
-        ". . . . ."
+        ". . . ."
+        ". featured-date . ."
+        ". featured-heading featured-heading ."
+        ". . . ."
+        ". featured-desc featured-desc ."
+        ". . . ."
     ;
+
+    margin-bottom: 1.3125em;
 }
 
 .featured, .featured h2 a {
@@ -109,14 +106,14 @@ main {
 }
 
 .featured__date {
-    grid-area: date;
+    grid-area: featured-date;
     align-self: end;
 
     font-size: 0.75rem;
 }
 
 .featured__heading {
-    grid-area: heading;
+    grid-area: featured-heading;
     align-self: end;
 }
 
@@ -127,9 +124,58 @@ main {
 }
 
 .featured__desc {
-    grid-area: desc;
+    grid-area: featured-desc;
 }
 
+/* Blog */
+
+.blog ul {
+    display: grid;
+}
+
+.blog ul li {
+    display: grid;
+    grid-template: 0.8125em 8fr 1fr 2fr 2fr 1.69em / 1.25em 1fr 2fr 1.25em;
+    grid-template-areas:
+        ".     .          .      ."
+        ". blog-image blog-image ."
+        ". blog-date      .      ."
+        ". blog-heading   .      ."
+        ". blog-desc  blog-desc  ."
+        ".      .         .      ."
+    ;
+}
+
+.blog ul li img {
+    grid-area: blog-image;
+    max-width: 374px;
+}
+
+.blog__date {
+    grid-area: blog-date;
+    align-self: end;
+
+    font-size: 0.875rem;
+    line-height: 1.29;
+}
+
+.blog__heading {
+    grid-area: blog-heading;
+    align-self: center;
+
+    font-size: 24px;
+    line-height: 26px;
+}
+
+.blog__desc {
+    grid-area: blog-desc;
+    align-self: end;
+
+    color: #505050;
+    font-size: 1rem;
+    line-height: 1.25;
+
+}
 
 /* Footer */
 
