@@ -138,7 +138,7 @@ main {
 
 .blog ul li {
     display: grid;
-    grid-template: 0.8125em 8fr 1fr 2fr 2fr 1.69em / 1.25em 1fr 2fr 1.25em;
+    grid-template: 0.8125em auto 1fr 2fr 2fr 1.69em / 1.25em 1fr 2fr 1.25em;
     grid-template-areas:
         ".     .          .      ."
         ". blog-image blog-image ."
@@ -153,8 +153,7 @@ main {
 
 .blog ul li img {
     grid-area: blog-image;
-    width: 374px;
-    height: 232px;
+    max-width: 374px;
     justify-self: center;
     object-fit: cover;
     border-radius: 1%;
