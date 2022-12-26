@@ -25,14 +25,14 @@ a {
 /* Mixed */
 
 .header__nav,
-.header__nav__logo-box a,
+.header__nav__logo-box,
 .header__nav__link-box,
 .header__nav__link-box ul,
 footer {
     display: flex;
 }
 
-.header__nav__logo-box a,
+.header__nav__logo-box,
 .header__nav__link-box,
 footer{
     align-items: center;
@@ -40,7 +40,7 @@ footer{
 
 /* f-w 700 */
 
-.header__nav__logo-box a p, .footer__heading {
+.header__nav__logo-box h1, .footer__heading {
     font-weight: 700;
 }
 
@@ -63,10 +63,13 @@ header {
     min-height: 1.5em;
 }
 
-.header__nav__logo-box a p {
+.header__nav__logo-box h1, .header__nav__link-box ul li a{
+    line-height: 1.25;
+}
+
+.header__nav__logo-box h1 {
     font-family: Roboto;
     font-size: 0.875rem;
-    line-height: 1.07;
     letter-spacing: -0.03em;
 }
 
@@ -77,10 +80,18 @@ header {
 .header__nav__link-box ul li a {
     font-size: 0.75rem;
     font-weight: 600;
-    line-height: 1.25;
     text-transform: uppercase;
 }
 
+/* Main */
+
+main {
+    display: grid;
+    grid-template-areas:
+        ". heading ."
+        ". blog ."
+    ;
+}
 
 /* Footer */
 
