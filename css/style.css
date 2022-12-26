@@ -38,10 +38,14 @@ footer{
     align-items: center;
 }
 
-/* f-w 700 */
+/* Misc */
 
-.header__nav__logo-box h1, .footer__heading {
+.fw700{
     font-weight: 700;
+}
+
+.lh1-25{
+    line-height: 1.25;
 }
 
 /* Header */
@@ -63,10 +67,6 @@ header {
     min-height: 1.5em;
 }
 
-.header__nav__logo-box h1, .header__nav__link-box ul li a{
-    line-height: 1.25;
-}
-
 .header__nav__logo-box h1 {
     font-family: Roboto;
     font-size: 0.875rem;
@@ -86,12 +86,50 @@ header {
 /* Main */
 
 main {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured {
+    background: url("../img/laptop-with-a-lamp.jpg") center center / cover no-repeat;
     display: grid;
+    grid-template: 1.5em 1fr 1fr 0.5em 1fr 2em / 1.25em 1fr 1fr 1fr 1.25em;
     grid-template-areas:
-        ". heading ."
-        ". blog ."
+        ". . . . ."
+        ". date . . ."
+        ". heading heading heading ."
+        ". . . . ."
+        ". desc desc desc ."
+        ". . . . ."
     ;
 }
+
+.featured, .featured h2 a {
+    color: #fff;
+}
+
+.featured__date {
+    grid-area: date;
+    align-self: end;
+
+    font-size: 0.75rem;
+}
+
+.featured__heading {
+    grid-area: heading;
+    align-self: end;
+}
+
+.featured__heading a {
+    font-size: 2rem;
+    line-height: 35px;
+    letter-spacing: -0.03em;
+}
+
+.featured__desc {
+    grid-area: desc;
+}
+
 
 /* Footer */
 
