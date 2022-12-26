@@ -42,6 +42,7 @@ header {
 
 .header__nav__logo-box img {
     margin-right: 0.1875em;
+    max-width: 24px;
 }
 
 .header__nav__link-box ul {
