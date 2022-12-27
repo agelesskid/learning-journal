@@ -74,6 +74,10 @@ footer {
 /* Media */
 
 @media (min-width: 1085px) {
+    header {
+        padding: 1.125em 3.6875em;
+    }
+
     .header__nav__logo-box img {
         margin-right: 0.28125em;
         max-width: 34px;
