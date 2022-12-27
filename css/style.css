@@ -64,18 +64,10 @@ main {
     font-size: 0.75rem;
 }
 
-.featured__wrapper__heading {
-
-}
-
 .featured__wrapper__heading a {
     font-size: 2rem;
     line-height: 35px;
     letter-spacing: -0.03em;
-}
-
-.featured__wrapper__desc {
-
 }
 
 /* Blog */
