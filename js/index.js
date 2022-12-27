@@ -1,6 +1,24 @@
 import { blogData } from "./data.js";
+import { featuredPost } from "./data.js";
 
 let blogLength = 3
+
+function getFeaturedPostHtml(){
+    let featuredPostHtml = `
+        <div class="featured__wrapper flex-column">
+            <p class="featured__wrapper__date lh1-25">${featuredPost.date}</p>
+            <h2 class="featured__wrapper__heading"><a href="${featuredPost.href}">${featuredPost.name}</a></h2>
+            <p class="featured__wrapper__desc lh1-25">${featuredPost.desc}</p>
+        </div>
+    `
+    return featuredPostHtml
+}
+
+function getFeaturedPostBackground() {
+    let featuredPostBackground = `url("${featuredPost.img}") center center / cover no-repeat;`
+
+    return featuredPostBackground
+}
 
 function getFeedArray(){
     const feedArr = []
@@ -33,6 +51,18 @@ function renderFeed(){
     document.getElementById('feed').innerHTML = getFeedHtml()
 }
 
+function renderFeaturedPost(){
+    const featured = document.getElementById('featured')
+    
+    featured.style.background = getFeaturedPostBackground()
+    featured.innerHTML = getFeaturedPostHtml()
+}
+
+function render(){
+    renderFeed()
+    renderFeaturedPost()
+}
+
 document.addEventListener('click', function(e){
     if (e.target.id == 'more-btn'){
         if (blogData.length > blogLength && (blogData.length - blogLength) >= 3){
@@ -44,4 +74,4 @@ document.addEventListener('click', function(e){
     }
 })
 
-renderFeed()
+render()

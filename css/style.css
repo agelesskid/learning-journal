@@ -47,7 +47,8 @@ main {
     background: url("../img/laptop-with-a-lamp.jpg") center center / cover no-repeat;
     display: flex;
     align-items: flex-end;
-    min-height: 488px;
+    min-height: 293px;
+    padding: 1.5625em 1.25em;
 }
 
 .featured, .featured h2 a {
@@ -56,6 +57,10 @@ main {
 
 .featured__wrapper__date {
     font-size: 0.75rem;
+}
+
+.featured__wrapper__heading {
+    margin: 0.5625em 0;
 }
 
 .featured__wrapper__heading a {
@@ -140,14 +145,11 @@ main {
     .featured {
         background-position: top center;
         padding: 3.6875em;
+        min-height: 488px;
     }
 
     .featured__wrapper__date, .featured__wrapper__desc {
         font-size: 1rem;
-    }
-
-    .featured__wrapper__heading {
-        margin: 0.5625em 0;
     }
 
     .featured__wrapper__heading a{

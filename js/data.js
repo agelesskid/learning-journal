@@ -49,3 +49,15 @@ export const blogData = [
         alt: "Laptop with an article on the table"
     },
 ]
+
+export const featuredPost = {
+    name: "My new journey as a bootcamp student.",
+    desc: `
+        After several months of learning in the Frontend Developer Career Path,
+        I've made the big jump over to the Bootcamp to get expert code reviews
+        of my Solo Projects projects and meet like-minded peers.
+    `,
+    date: "JULY 23, 2022",
+    img: "../img/laptop-with-a-lamp.jpg",
+    href: "./featured.html",
+}
