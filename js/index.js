@@ -1,9 +1,21 @@
 import { blogData } from "./data.js";
 
+let blogLength = 3
+
+function getFeedArray(){
+    const feedArr = []
+
+    for (let i = 0; i < blogLength; i++){
+        feedArr.push(blogData[i])
+    }
+
+    return feedArr
+}
+
 function getFeedHtml(){
     let feedHtml = ''
 
-    blogData.forEach(function(blog){
+    getFeedArray().forEach(function(blog){
         feedHtml += `
             <li>
                 <img src="${blog.img}" alt="${blog.alt}">
@@ -20,5 +32,16 @@ function getFeedHtml(){
 function renderFeed(){
     document.getElementById('feed').innerHTML = getFeedHtml()
 }
+
+document.addEventListener('click', function(e){
+    if (e.target.id == 'more-btn'){
+        if (blogData.length > blogLength && (blogData.length - blogLength) >= 3){
+            blogLength += 3
+        } else if (blogData.length > blogLength && (blogData.length - blogLength) < 3){
+            blogLength += (blogData.length - blogLength)
+        }
+        renderFeed()
+    }
+})
 
 renderFeed()

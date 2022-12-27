@@ -10,7 +10,7 @@
 <body>
     <header></header>
 
-    <main class="flex">
+    <main class="flex-column">
         <section class="featured">
             <p class="featured__date lh1-25">JULY 23, 2022</p>
             <h2 class="featured__heading"><a href="./featured.html">My new journey as a bootcamp student.</a></h2>
@@ -20,18 +20,9 @@
                 of my Solo Projects projects and meet like-minded peers.
             </p>
         </section>
-        <section class="blog">
-            <ul id="feed">
-                <li>
-                    <img src="./img/laptop-on-the-table-with-a-plant.jpg" alt="Laptop on the table with a plant">
-                    <p class="blog__date">JULY 23, 2022</p>
-                    <h2 class="blog__heading">Blog one</h2>
-                    <p class="blog__desc">
-                        I'm excited to start a new learning journey as a Scrimba Bootcamp student!
-                        After several months of learning in the Frontend Developer Career Path.
-                    </p>
-                </li>
-            </ul>
+        <section class="blog flex-column">
+            <ul id="feed"></ul>
+            <button class="blog__btn lh1-25" type="button" id="more-btn">View more</button>
         </section>
     </main>
 

@@ -1,3 +1,9 @@
+/* Misc */
+
+.flex {
+    display: flex;
+}
+
 /* Header */
 
 header {
@@ -48,6 +54,7 @@ footer {
     background: #202020;
     color: #ECECEC;
     padding: 2.3125em 0;
+    margin-top: 2.25em;
 }
 
 .footer__heading, .footer__desc {
