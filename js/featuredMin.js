@@ -1,6 +1,6 @@
 import { postsData } from "./data.js"
 
-function getFeaturedPostMin(){
+function getFeaturedMinPost(){
     let featuredPost = {
         html: ``,
         background: ``,
@@ -22,11 +22,11 @@ function getFeaturedPostMin(){
     return featuredPost
 }
 
-function renderFeaturedPostMin(){
+function renderFeaturedMinPost(){
     const featured = document.getElementById('featured')
     
-    featured.style.background = getFeaturedPostMin().background
-    featured.innerHTML = getFeaturedPostMin().html
+    featured.style.background = getFeaturedMinPost().background
+    featured.innerHTML = getFeaturedMinPost().html
 }
 
-renderFeaturedPostMin()
+renderFeaturedMinPost()

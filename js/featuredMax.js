@@ -1,6 +1,6 @@
 import { postsData } from "./data.js"
 
-function getFeaturedPostMax(){
+function getFeaturedMaxPost(){
     let featuredPost = ``
 
     postsData.forEach(function(post){
@@ -14,8 +14,8 @@ function getFeaturedPostMax(){
     return featuredPost
 }
 
-function renderFeaturedPostMax(){
-document.getElementById('featured').innerHTML = getFeaturedPostMax().html
+function renderFeaturedMaxPost(){
+document.getElementById('featured-post').innerHTML = getFeaturedMaxPost()
 }
 
-renderFeaturedPostMax()
+renderFeaturedMaxPost()
