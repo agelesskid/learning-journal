@@ -15,7 +15,7 @@ function getFeaturedMinPost(){
                     <p class="featured__wrapper__desc lh1-25">${post.desc}</p>
                 </div>
             `
-            featuredPost.background = `url(".${post.img}") center center / cover no-repeat;`
+            featuredPost.background = `#000 url('${post.img}') center center / cover no-repeat`
         }
     })
 
@@ -24,7 +24,7 @@ function getFeaturedMinPost(){
 
 function renderFeaturedMinPost(){
     const featured = document.getElementById('featured')
-    
+
     featured.style.background = getFeaturedMinPost().background
     featured.innerHTML = getFeaturedMinPost().html
 }
