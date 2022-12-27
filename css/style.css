@@ -43,6 +43,7 @@ h1, h2, h2 a, h3, button {
 main {
     flex-direction: column;
     padding-bottom: 2.25em;
+    background: #fff;
 }
 
 .featured {
