@@ -27,6 +27,12 @@ h1, h2, h2 a, h3, button {
     font-weight: 700;
 }
 
+main {
+    flex-direction: column;
+    padding-bottom: 2.25em;
+    background: #fff;
+}
+
 /* Misc */
 
 .flex-column {
@@ -38,16 +44,15 @@ h1, h2, h2 a, h3, button {
     line-height: 1.25;
 }
 
-/* Main */
+/* Featured Mixed */
 
-main {
-    flex-direction: column;
-    padding-bottom: 2.25em;
-    background: #fff;
+.featured__wrapper__date, .featured-post__date {
+    font-size: 0.75rem;
 }
 
+/* Featured Min */
+
 .featured {
-    background: url("../img/laptop-with-a-lamp.jpg") center center / cover no-repeat;
     display: flex;
     align-items: flex-end;
     min-height: 293px;
@@ -58,10 +63,6 @@ main {
     color: #fff;
 }
 
-.featured__wrapper__date {
-    font-size: 0.75rem;
-}
-
 .featured__wrapper__heading {
     margin: 0.5625em 0;
 }
@@ -70,6 +71,36 @@ main {
     font-size: 2rem;
     line-height: 35px;
     letter-spacing: -0.03em;
+}
+
+/* Featured Max */
+
+.featured-main {
+    padding: 2em 1.25em 3.5em;
+}
+
+.featured-post__date, .featured-post__heading {
+    margin-bottom: 1rem;
+}
+
+.featured-post__heading{
+    font-size: 2em;
+    line-height: 1.06;
+}
+
+.featured-post img {
+    margin: 2.1875em 0;
+    max-width: 100%;
+    max-height: 191px;
+    object-fit: cover;
+}
+
+.featured-post__wrapper__article__heading, .featured-post__wrapper__article__desc {
+    margin-bottom: 1.8125em;
+}
+
+.featured-post__wrapper__article__heading {
+    font-size: 1rem;
 }
 
 /* Blog */
@@ -147,7 +178,21 @@ main {
         background-color: #FAFAFA;
     }
 
-    /* Featured */
+    /* Featured Mixed */
+
+    .featured__wrapper__date, .featured__wrapper__desc, .featured-post__date {
+        font-size: 1rem;
+    }
+
+    .featured__wrapper__heading a, .featured-post__heading {
+        line-height: 1.08;
+    }
+
+    .featured-post__date, .featured-post__heading {
+        margin-bottom: 0rem;
+    }
+
+    /* Featured Min */
 
     .featured {
         background-position: top center;
@@ -155,17 +200,74 @@ main {
         min-height: 488px;
     }
 
-    .featured__wrapper__date, .featured__wrapper__desc {
-        font-size: 1rem;
-    }
-
     .featured__wrapper__heading a{
         font-size: 2.5rem;
-        line-height: 1.075;
     }
 
     .featured__wrapper__desc {
         padding-right: 36%;
+    }
+
+    /* Featured Max */
+
+    .featured-main {
+        padding: 0;
+    }
+
+    .featured-post {
+        display: grid;
+        grid-template: 1fr 1.5em 1fr 1.5em 1fr 2.25em auto 2.25em auto / 3.3125em 4.25em 1fr 4.25em 3.3125em;
+        grid-template-areas: 
+            ".  .  main-date    .  ."
+            ".  .      .        .  ."
+            ".  .  main-heading .  ."
+            ".  .      .        .  ."
+            ".  .  main-desc    .  ."
+            ".  .      .        .  ."
+            ". img    img     img  ."
+            ".  .      .        .  ."
+            ".  .     post       . ."
+        ;
+    }
+
+    .featured-post__date {
+        grid-area: main-date;
+        align-self: end;
+    }
+
+    .featured-post__heading {
+        grid-area: main-heading;
+
+        font-size: 2.25rem;
+    }
+
+    .featured-post__desc{
+        grid-area: main-desc;
+    }
+
+    .featured-post__desc, .featured-post__wrapper__article__desc{
+        font-size: 1.125em;
+        line-height: 1.28;
+    }
+
+    .featured-post img {
+        grid-area: img;
+        margin: 0;
+        width: 100%;
+        max-height: 488px;
+        object-position: top center;
+    }
+
+    .featured-post__wrapper {
+        grid-area: post;
+    }
+
+    .featured-post__wrapper__heading {
+        font-size: 1.5em;
+    }
+
+    .featured-post__wrapper__article__heading,  .featured-post__wrapper__article__desc{
+        margin-bottom: 2rem;
     }
 
     /* Blog */
