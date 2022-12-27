@@ -54,7 +54,7 @@ export const postsData = [
             I've made the big jump over to the Bootcamp to get expert code reviews
             of my Solo Projects projects and meet like-minded peers.
         `,
-        date: "JULY 23, 2022",
+        date: "JULY 29, 2022",
         img: "./img/laptop-with-a-lamp.jpg",
         alt: "Laptop with a lamp",
         data: [
