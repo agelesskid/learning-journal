@@ -54,13 +54,7 @@ main {
     color: #fff;
 }
 
-.featured__wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
 .featured__wrapper__date {
-
     font-size: 0.75rem;
 }
 
@@ -72,12 +66,7 @@ main {
 
 /* Blog */
 
-.blog {
-    flex-direction: column;
-}
-
 .blog ul {
-    flex-direction: column;
     padding-top: 1.25em;
 }
 
