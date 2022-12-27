@@ -76,6 +76,13 @@ document.addEventListener('click', function(e){
             blogLength += 3
         } else if (blogData.length > blogLength && (blogData.length - blogLength) < 3){
             blogLength += (blogData.length - blogLength)
+        } else if (blogData.length == blogLength) {
+            let btn = document.getElementById('more-btn')
+
+            btn.style.textDecoration = 'none'
+            btn.style.cursor = 'default'
+            btn.style.color = '#10B981'
+            btn.innerText = 'all rendered!'
         }
         renderFeed()
     }
