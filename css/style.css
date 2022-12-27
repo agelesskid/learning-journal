@@ -41,6 +41,7 @@ h1, h2, h2 a, h3, button {
 
 main {
     flex-direction: column;
+    padding-bottom: 2.25em;
 }
 
 .featured {
@@ -138,6 +139,10 @@ main {
 @media (min-width: 1085px) {
     body {
         max-width: 1085px;
+    }
+
+    main {
+        background-color: #FAFAFA;
     }
 
     /* Featured */
