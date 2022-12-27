@@ -3,6 +3,12 @@ import { featuredPost } from "./data.js";
 
 let blogLength = 3
 
+if(window.matchMedia("(min-width: 1085px)").matches) {
+    blogLength = 6
+} else {
+    blogLength = 3
+}
+
 function getFeaturedPostHtml(){
     let featuredPostHtml = `
         <div class="featured__wrapper flex-column">
@@ -48,6 +54,7 @@ function getFeedHtml(){
 }
 
 function renderFeed(){
+    
     document.getElementById('feed').innerHTML = getFeedHtml()
 }
 
@@ -73,5 +80,6 @@ document.addEventListener('click', function(e){
         renderFeed()
     }
 })
+
 
 render()
