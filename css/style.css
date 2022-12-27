@@ -45,42 +45,37 @@ main {
 
 .featured {
     background: url("../img/laptop-with-a-lamp.jpg") center center / cover no-repeat;
-    display: grid;
-    grid-template: 1.5em 1fr 1fr 0.5em 1fr 2em / 1.25em 1fr 2fr 1.25em;
-    grid-template-areas:
-        ". . . ."
-        ". featured-date . ."
-        ". featured-heading featured-heading ."
-        ". . . ."
-        ". featured-desc featured-desc ."
-        ". . . ."
-    ;
+    display: flex;
+    align-items: flex-end;
+    min-height: 488px;
 }
 
 .featured, .featured h2 a {
     color: #fff;
 }
 
-.featured__date {
-    grid-area: featured-date;
-    align-self: end;
+.featured__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured__wrapper__date {
 
     font-size: 0.75rem;
 }
 
-.featured__heading {
-    grid-area: featured-heading;
-    align-self: end;
+.featured__wrapper__heading {
+
 }
 
-.featured__heading a {
+.featured__wrapper__heading a {
     font-size: 2rem;
     line-height: 35px;
     letter-spacing: -0.03em;
 }
 
-.featured__desc {
-    grid-area: featured-desc;
+.featured__wrapper__desc {
+
 }
 
 /* Blog */
@@ -92,20 +87,18 @@ main {
 .blog ul {
     flex-direction: column;
     padding-top: 1.25em;
-    /* grid-template-columns: repeat(3, 1fr);
-    gap: 1.625em; */
 }
 
 .blog ul li {
     display: grid;
     grid-template: 1.25em auto 1fr 2fr 2fr 1.25em / 1.25em 1fr 2fr 1.25em;
     grid-template-areas:
-        ".     .          .      ."
-        ". blog-image blog-image ."
-        ". blog-date      .      ."
-        ". blog-heading   .      ."
-        ". blog-desc  blog-desc  ."
-        ".      .         .      ."
+        ".     .              .        ."
+        ". blog-image     blog-image   ."
+        ". blog-date          .        ."
+        ". blog-heading   blog-heading ."
+        ". blog-desc      blog-desc    ."
+        ".     .              .        ."
     ;
 
     justify-items: start;
@@ -113,7 +106,7 @@ main {
 
 .blog ul li img {
     grid-area: blog-image;
-    max-width: 374px;
+    width: 100%;
     justify-self: center;
     object-fit: cover;
     border-radius: 1%;
@@ -140,7 +133,6 @@ main {
     align-self: end;
 
     color: #505050;
-    font-size: 1rem;
 }
 
 .blog__btn {
@@ -151,7 +143,68 @@ main {
     margin-bottom: 0.4375em;
     cursor: pointer;
 
-    font-size: 1rem;
     text-decoration: underline;
     text-transform: capitalize;
+}
+
+/* Media */
+
+@media (min-width: 1085px) {
+    body {
+        max-width: 1085px;
+    }
+
+    /* Featured */
+
+    .featured {
+        background-position: top center;
+        padding: 3.6875em;
+    }
+
+    .featured__wrapper__date, .featured__wrapper__desc {
+        font-size: 1rem;
+    }
+
+    .featured__wrapper__heading {
+        margin: 0.5625em 0;
+    }
+
+    .featured__wrapper__heading a{
+        font-size: 2.5rem;
+        line-height: 1.075;
+    }
+
+    .featured__wrapper__desc {
+        padding-right: 36%;
+    }
+
+    /* Blog */
+
+    .blog ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(19.3125em, 1fr));
+        gap: 1.625em;
+        padding: 3.3125em;
+        
+    }
+    .blog ul li {
+        grid-template: minmax(14.5rem, auto) 1fr 1fr 2fr / 1fr 2fr;
+        grid-template-areas:
+        "blog-image    blog-image "
+        "blog-date         .      "
+        "blog-heading blog-heading"
+        "blog-desc     blog-desc  "
+        ;
+    }
+    .blog ul li img {
+        height: 100%;
+    }
+
+    .blog__date {
+        align-self: center;
+    }
+
+    .blog__heading {
+        align-self: center;
+    }
 }

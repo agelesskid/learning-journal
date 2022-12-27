@@ -41,4 +41,11 @@ export const blogData = [
         img: "./img/laptop-with-an-article-on-the-table.jpg",
         alt: "Laptop with an article on the table"
     },
+    {
+        name: "Blog six",
+        desc: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
+        date: "JULY 28, 2022",
+        img: "./img/laptop-with-an-article-on-the-table.jpg",
+        alt: "Laptop with an article on the table"
+    },
 ]

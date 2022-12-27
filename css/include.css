@@ -25,6 +25,7 @@ header {
 }
 
 .header__nav__link-box ul {
+    align-items: center;
     min-height: 1.5em;
 }
 
@@ -68,4 +69,23 @@ footer {
 
 .footer__desc {
     line-height: 1.25;
+}
+
+/* Media */
+
+@media (min-width: 1085px) {
+    .header__nav__logo-box img {
+        margin-right: 0.28125em;
+        max-width: 34px;
+    }
+
+    .header__nav__logo-box h1 {
+        font-size: 1.25rem;
+    }
+
+    .header__nav__link-box ul li a {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
 }
