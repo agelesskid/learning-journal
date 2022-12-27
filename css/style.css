@@ -54,8 +54,6 @@ main {
         ". featured-desc featured-desc ."
         ". . . ."
     ;
-
-    margin-bottom: 1.3125em;
 }
 
 .featured, .featured h2 a {
@@ -89,6 +87,7 @@ main {
 .blog ul {
     display: flex;
     flex-direction: column;
+    padding-top: 1.3125em;
     /* grid-template-columns: repeat(3, 1fr);
     gap: 1.625em; */
 }
