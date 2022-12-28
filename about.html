@@ -11,7 +11,7 @@
     
     <header></header>
 
-    <main class="about-main">
+    <main class="about-main flex-column">
         <section class="about-main__section">
             <img src="./img/scrimba-avatar.png" alt="Guy smiling">
             <h1 class="about-main__section__heading">Hi there! My name is Roku and welcome to my learning journal.</h1>
@@ -24,10 +24,15 @@
         <section class="about-main__wrapper-section flex-column">
             <div class="featured-post__wrapper"></div>
         </section>
+        <section class="about-main__blog-section blog flex-column">
+            <h2 class="about-main__blog-section__heading blog-section__heading lh1-25">Recent posts</h2>
+            <ul class="flex-column" id="feed"></ul>
+        </section>
     </main>
 
     <footer></footer>
 
+    <script src="./js/feed.js" type="module"></script>
     <script src="./js/about.js" type="module"></script>
     <script src="./js/include.js"></script>
 </body>

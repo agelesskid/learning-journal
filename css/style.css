@@ -28,7 +28,6 @@ h1, h2, h2 a, h3, button {
 }
 
 main {
-    flex-direction: column;
     padding-bottom: 2.25em;
     background: #fff;
 }
@@ -42,6 +41,10 @@ main {
 
 .lh1-25 {
     line-height: 1.25;
+}
+
+.featured-main, .about-main {
+    color: #151515;
 }
 
 /* Featured Mixed */
@@ -105,6 +108,10 @@ main {
 
 /* Blog */
 
+.blog {
+    color: #141414;
+}
+
 .blog ul {
     padding-top: 1.25em;
 }
@@ -145,7 +152,6 @@ main {
     align-self: center;
 
     font-size: 1.5rem;
-    line-height: 1.08;
 }
 
 .blog__desc {
@@ -156,15 +162,21 @@ main {
 }
 
 .blog__btn {
-    margin: 0 auto;
+    margin: 2.2em auto 0.4375em;
     border: none;
     background: none;
     padding: 0.4375em;
-    margin-bottom: 0.4375em;
     cursor: pointer;
 
     text-decoration: underline;
     text-transform: capitalize;
+}
+
+.blog-section__heading {
+    margin-top: 1.375em;
+
+    text-align: center;
+    font-size: 1rem;
 }
 
 /* About */
@@ -205,7 +217,7 @@ main {
         font-size: 1rem;
     }
 
-    .featured__wrapper__heading a, .featured-post__heading {
+    .featured__wrapper__heading a, .featured-post__heading, .blog__heading, .blog-section__heading {
         line-height: 1.08;
     }
 
@@ -303,7 +315,7 @@ main {
         grid-template-columns: repeat(3, minmax(19.3125em, 1fr));
         gap: 1.625em;
         padding: 3.3125em;
-        
+        padding-bottom: 0;
     }
     .blog ul li {
         grid-template: minmax(14.5rem, auto) 1fr 1fr 2fr / 1fr 2fr;
@@ -326,15 +338,24 @@ main {
         align-self: center;
     }
 
+    .blog-section__heading {
+        margin-top: 0.91em;
+
+        font-size: 1.5rem;
+    }
+
     /* About */
 
     .about-main {
-        padding: 5.6875em 3.3125em 3.1875em;
+        padding: 0;
+        padding-top: 5.6875em;
+        padding-bottom: 3.1875em;
     }
 
     .about-main__section {
         display: grid;
         grid-template: 1.2em 1fr 1fr / 1fr 2em 4fr;
+        padding: 0 3.3125em;
     }
 
     .about-main__section img {
@@ -359,7 +380,7 @@ main {
     }
 
     .about-main__wrapper-section {
-        padding: 0 4.25em;
+        padding: 0 7.5em;
     }
 
     .about-main__wrapper-section .featured-post__wrapper__article__heading {
@@ -369,4 +390,5 @@ main {
     .about-main__wrapper-section .featured-post__wrapper__article__desc {
         font-size: 1rem;
     }
+
 }

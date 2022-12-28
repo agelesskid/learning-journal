@@ -2,7 +2,7 @@ import { postsData } from "./data.js";
 
 let blogLength = 3
 
-if(window.matchMedia("(min-width: 1085px)").matches) {
+if(window.matchMedia("(min-width: 1085px)").matches && window.location.pathname == '/index.html') {
     blogLength = 6
 } else {
     blogLength = 3
