@@ -10,7 +10,7 @@ header[0].innerHTML = `
         </div>
         <div class="header__nav__link-box flex">
             <ul class="flex">
-                <li><a class="lh1-25" href="./index.html">Home</a></li>
+                <li><a class="lh1-25" href="./">Home</a></li>
                 <li><a class="lh1-25" href="./about.html">About me</a></li>
             </ul>
         </div>
