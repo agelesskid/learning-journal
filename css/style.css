@@ -27,11 +27,6 @@ h1, h2, h2 a, h3, button {
     font-weight: 700;
 }
 
-main {
-    padding-bottom: 2.25em;
-    background: #fff;
-}
-
 /* Misc */
 
 .flex-column {
@@ -43,8 +38,28 @@ main {
     line-height: 1.25;
 }
 
+/* Mains */
+
+main {
+    background: #fff;
+}
+
+.featured-main {
+    padding-top: 2em;
+}
+
+.about-main {
+    padding-top: 1.625em;
+}
+
+.index-main {
+    padding-bottom: 2.25em;
+}
+
 .featured-main, .about-main {
     color: #151515;
+    padding: 0 1.25em;
+    padding-bottom: 3.1875em;
 }
 
 /* Featured Mixed */
@@ -77,10 +92,6 @@ main {
 }
 
 /* Featured Max */
-
-.featured-main {
-    padding: 2em 1.25em 3.5em;
-}
 
 .featured-post__date, .featured-post__heading {
     margin-bottom: 1rem;
@@ -162,7 +173,8 @@ main {
 }
 
 .blog__btn {
-    margin: 2.2em auto 0.4375em;
+    margin: 0 auto;
+    margin-top: 1.25em;
     border: none;
     background: none;
     padding: 0.4375em;
@@ -180,11 +192,6 @@ main {
 }
 
 /* About */
-
-.about-main {
-    padding: 0 1.25em;
-    padding-top: 1.625em;
-}
 
 .about-main__section {
     margin-bottom: 3.125em;
@@ -349,7 +356,6 @@ main {
     .about-main {
         padding: 0;
         padding-top: 5.6875em;
-        padding-bottom: 3.1875em;
     }
 
     .about-main__section {
