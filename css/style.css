@@ -174,7 +174,6 @@ main {
 
 .blog__btn {
     margin: 0 auto;
-    margin-top: 1.25em;
     border: none;
     background: none;
     padding: 0.4375em;
@@ -218,6 +217,21 @@ main {
         background-color: #FAFAFA;
     }
 
+    /* Mains */
+
+    .featured-main {
+        padding: 0;
+    }
+
+    .about-main {
+        padding: 0;
+        padding-top: 5.6875em;
+    }
+
+    .index-main, .featured-main, .about-main {
+        padding-bottom: 3.1875em;
+    }
+
     /* Featured Mixed */
 
     .featured__wrapper__date, .featured__wrapper__desc, .featured-post__date {
@@ -254,10 +268,6 @@ main {
     }
 
     /* Featured Max */
-
-    .featured-main {
-        padding: 0;
-    }
 
     .featured-post {
         display: grid;
@@ -351,12 +361,11 @@ main {
         font-size: 1.5rem;
     }
 
-    /* About */
-
-    .about-main {
-        padding: 0;
-        padding-top: 5.6875em;
+    .blog__btn {
+        margin-top: 2.2em;
     }
+
+    /* About */
 
     .about-main__section {
         display: grid;
